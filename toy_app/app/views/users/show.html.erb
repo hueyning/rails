@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<% if @micropost %>
+  <p>
+    <strong>Dat microposts:</strong>
+    <% @micropost.each do |micropost| %>
+      <br><%= micropost.content %>
+    <% end %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
